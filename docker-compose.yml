@@ -1,0 +1,22 @@
+services:
+  db: 
+    image: postgres:latest
+    container_name: my_db_compose
+    ports:
+      - "55432:5432"
+    environment:
+      POSTGRES_USER: nathakrit
+      POSTGRES_PASSWORD: nathakrit
+      POSTGRES_DB: nathakrit
+      
+  web:
+    image: prawee/strapi:latest
+    container_name: my_app_compose
+    ports:
+      - "8080:1337"
+    environment:
+      DATABASE_HOST: 192.168.1.105
+      DATABASE_PORT: 55432
+      DATABASE_NAME: nathakrit
+      DATABASE_USERNAME: nathakrit
+      DATABASE_PASSWORD: nathakrit
