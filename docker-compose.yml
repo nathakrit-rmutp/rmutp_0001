@@ -3,7 +3,7 @@ services:
     image: postgres:latest
     container_name: my_db_compose
     ports:
-      - "55432:5432"
+      - "${DATABASE_PORT}:5432"
     environment:
       POSTGRES_USER: ${DATABASE_NAME}
       POSTGRES_PASSWORD: ${DATABASE_USERNAME}
