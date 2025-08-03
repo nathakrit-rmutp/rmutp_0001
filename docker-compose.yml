@@ -7,7 +7,7 @@ services:
     environment:
       POSTGRES_USER: ${DATABASE_NAME}
       POSTGRES_PASSWORD: ${DATABASE_USERNAME}
-      POSTGRES_DB: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_PASSWORD}-
       
   web:
     image: prawee/strapi:latest
